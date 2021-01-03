@@ -16,6 +16,6 @@ public class GoogleTest {
         //input text for search
         $(byName("q")).val("Debit card").pressEnter();
         //assert text
-        $("html").shouldHave(text("Debit card"));
+        $("#search").shouldHave(text("Debit card"));
     }
 }
