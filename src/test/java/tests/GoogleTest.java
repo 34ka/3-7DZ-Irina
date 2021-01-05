@@ -18,4 +18,14 @@ public class GoogleTest {
         //assert text
         $("html").shouldHave(text("Debit card"));
     }
+    
+    @Test
+    public void yandexSearchString () {
+        //open link
+        open("https://ya.ru");
+        //input text for search
+        $(".search2__input input").val("Debit card").pressEnter();
+        //assert text
+        $("ul#search-result").shouldHave(text("Debit card"));
+    }
 }
